@@ -9,15 +9,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-	background-image: url("http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+	background-image: url("https://i.stack.imgur.com/7vMmx.jpg");
     margin:0;
 
 }
 
 
 .navbar {
-
- 
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -36,10 +34,10 @@ body {
 }
 
 img {
-	height:70px;
-    width:70px;
+    height:80px;
+    width:80px;
     position: relative;
-    padding: 7px 7px;
+    padding: 10px 10px;
     
 
 }
@@ -72,7 +70,7 @@ input {
     width: 250px;
     height: 60px;
     font-size:30px;
-    background-image: url('http://pngimg.com/uploads/google/google_PNG19630.png');
+    background-image: url('https://proudloyaltier.github.io/timedia/beta/other%20resources/app-icon/android-icon-144x144.png');
     background-size:40px;
    background-position: 10px 10px; 
     background-repeat: no-repeat;
@@ -80,48 +78,6 @@ input {
     outline:none;
 }
 </style>
-
-<script>
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
-
-const gestureZone = document.getElementById('gestureZone');
-
-gestureZone.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-}, false);
-
-gestureZone.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-}, false); 
-
-function handleGesture() {
-    if (touchendX <= touchstartX) {
-        alert('Swiped left');
-    }
-    
-    if (touchendX >= touchstartX) {
-        alert('Swiped right');
-    }
-    
-    if (touchendY <= touchstartY) {
-        alert('Swiped up');
-    }
-    
-    if (touchendY >= touchstartY) {
-        alert('Swiped down');
-    }
-    
-    if (touchendY === touchstartY) {
-        alert('Tap');
-    }
-}
-</script>
 </head>
 <body>
 
@@ -140,11 +96,6 @@ function handleGesture() {
 <!-- Maps -->
 <a href="/maps"> <img src="https://image.flaticon.com/icons/svg/355/355980.svg"> </a>
 </div>
-
-
-<div id="swipezone">
-
-
 
 <div class="main">
 <input>
