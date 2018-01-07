@@ -24,8 +24,10 @@ if (window.url == "false") {
 window.url = "https://google.com/"
 }
 
-document.getElementById('broswer-window').src = window.url;
+document.getElementById('broswer-window').data = window.url;
 </script>
-<iframe src="https://google.com" width="500px" height="1000px"></iframe>
+<object type="text/html" data="http://www.flickr.com" style="width:100%; height:100%">
+<p>An error occured.</p>
+</object>
 </body>
 </html>
