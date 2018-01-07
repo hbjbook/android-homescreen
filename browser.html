@@ -1,11 +1,6 @@
 <DOCTYPE html>
 <html>
 <body>
-<style>
-.iframe {
- border: none;
- }
- </style>
  <script>
  function getQueryVariable(variable)
 {
@@ -25,8 +20,20 @@ window.url = "https://google.com/"
 }
 
 document.getElementById('broswer-window').data = window.url;
+  
+  function changeObjectUrl(newUrl)
+{
+    var oContentArea = document.getElementById("contentarea");
+    var oClone = oContentArea.cloneNode(true); 
+    oClone.data = newUrl; 
+
+    var oPlaceHolder = document.getElementById("contentholder"); 
+    oPlaceHolder.removeChild(oContentArea); 
+    oPlaceHolder.appendChild(oClone); 
+}
+  changeObjectUrl(window.url);
 </script>
-<object type="text/html" data="http://www.flickr.com" style="width:100%; height:100%">
+<object type="text/html" id="contentarea" data="https://google.com" style="width:100%; height:100%">
 <p>An error occured.</p>
 </object>
 </body>
