@@ -1,0 +1,31 @@
+<DOCTYPE html>
+<html>
+<body>
+<style>
+.iframe {
+ border: none;
+ }
+ </style>
+ <script>
+ function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+window.url = getQueryVariable("url")
+
+if (window.url == "false") {
+window.url = "https://google.com/"
+}
+
+document.getElementById('broswer-window').src = window.url;
+</script>
+<iframe src="https://google.com" width="500px" height="1000px"></iframe>
+</body>
+</html>
