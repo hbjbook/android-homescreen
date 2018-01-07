@@ -7,16 +7,17 @@
 <script>
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<center>
 <style>
 body {
-	background-image: url("https://i.stack.imgur.com/7vMmx.jpg");
+	background-image: url("http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
     margin:0;
 
 }
 
 
 .navbar {
+
+ 
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -35,10 +36,10 @@ body {
 }
 
 img {
-    height:80px;
-    width:80px;
+	height:70px;
+    width:70px;
     position: relative;
-    padding: 10px 10px;
+    padding: 7px 7px;
     
 
 }
@@ -66,12 +67,12 @@ img {
 }
 
 input {
-	border-radius: 8px;
-	border:none;
+    border-radius: 8px;
+    border:none;
     width: 250px;
     height: 60px;
     font-size:30px;
-    background-image: url('https://proudloyaltier.github.io/timedia/beta/other%20resources/app-icon/android-icon-144x144.png');
+    background-image: url('http://pngimg.com/uploads/google/google_PNG19630.png');
     background-size:40px;
    background-position: 10px 10px; 
     background-repeat: no-repeat;
@@ -79,18 +80,70 @@ input {
     outline:none;
 }
 </style>
+
+<script>
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const gestureZone = document.getElementById('gestureZone');
+
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false); 
+
+function handleGesture() {
+    if (touchendX <= touchstartX) {
+        alert('Swiped left');
+    }
+    
+    if (touchendX >= touchstartX) {
+        alert('Swiped right');
+    }
+    
+    if (touchendY <= touchstartY) {
+        alert('Swiped up');
+    }
+    
+    if (touchendY >= touchstartY) {
+        alert('Swiped down');
+    }
+    
+    if (touchendY === touchstartY) {
+        alert('Tap');
+    }
+}
+</script>
 </head>
 <body>
 
 
 
 <div class="navbar">
+ <!-- Mail -->
+<a href="/mail"> <img data-notifications="45" src="https://image.flaticon.com/icons/png/512/281/281769.png"> </a>
 
 <!-- Settings -->
-<a href="https://proudloyaltier.github.io/timedia.beta/index.html?app=6"> <img src="http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/256/settings-icon.png"> </a>
+<a href="/settings"> <img src="http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/256/settings-icon.png"> </a>
 
 <!-- Calander -->
 <a href="/calander"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Circle-icons-calendar.svg/1024px-Circle-icons-calendar.svg.png"> </a>
+
+<!-- Maps -->
+<a href="/maps"> <img src="https://image.flaticon.com/icons/svg/355/355980.svg"> </a>
+</div>
+
+
+<div id="swipezone">
+
 
 
 <div class="main">
@@ -103,18 +156,33 @@ input {
 <!-- Chrome -->
 <a href="https://google.com"> <img src="https://cdn1.iconfinder.com/data/icons/appicns/513/appicns_Chrome.png"> </a>
 
+<!-- Messages -->
+<a href="https://google.com/messages"> <img src="https://forum.fairphone.com/uploads/default/original/2X/c/c16e438267624cc7e8f2156c51869dbb44c657d3.png"> </a>
+
+<!-- Camera -->
+<a href="/camera"> <img src="http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/Dslr-Camera-icon.png"> </a>
+
+<!-- YouTube -->
+<a href="/youtube"> <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-youtube-circle-256.png"> </a>
+</div>
+
 
 <div class="main">
 
 
 <!-- Google Drive -->
-<a href="https://proudloyaltier.github.io/timedia/beta/?app=7"> <img src="http://www.downloadfreesvgicons.com/icons/cloud-icons/svg-cloud-icon-5/svg-cloud-icon-5.svg"> </a>
+<a href="https://google.com/drive"> <img src="http://icons.iconarchive.com/icons/dtafalonso/android-l/512/Drive-icon.png"> </a>
+
+<!-- Photos -->
+<a href="https://google.com/photos"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Google_Photos_icon.svg/1000px-Google_Photos_icon.svg.png"> </a>
+
+<!-- App Store -->
+<a href="https://play.google.com"> <img src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/AppStore-icon.png"> </a>
 
 <!-- Google Hangout -->
-<a href="https://proudloyaltier.github.io/timedia/beta/?app=2"> <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/256/Hangouts-icon.png"> </a>
+<a href="https://google.com/hangouts"> <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/256/Hangouts-icon.png"> </a>
 </div>
 
 </div>
-<center>
 </body>
 </html>
